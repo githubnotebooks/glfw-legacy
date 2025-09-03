@@ -52,10 +52,9 @@
               })
             ];
           };
-        in
-        {
+        in {
           default = pkgs.mkShellNoCC {
-            name = "Hazel";
+            name = "glfw-legacy";
             hardeningDisable = [ "fortify" ];
             packages = with pkgs; [
               boost
@@ -102,6 +101,5 @@
           };
         });
 
-    in
-    { devShells = eachSystem; };
+    in { devShells = eachSystem; };
 }
